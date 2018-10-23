@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        const timeoutIn = (num) => {
+            return new Promise((resolve, reject) => {
+                if (num < 10) {
+                    resolve(num)
+                } else {
+                    reject(false)
+                }
+            })
+
+        }
+        const numArry = [
+            timeoutIn(5),
+            timeoutIn(1),
+            timeoutIn(8)
+        ]
+        Promise.all(numArry)
+            .then(values => {
+                console.log('All the promises are resolved now you can run your code', values)
+                // your code
+            });
+    </script>
+</body>
+
+</html>

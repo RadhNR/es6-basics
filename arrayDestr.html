@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        // array 
+        var [g1, g4] = ['Bangalore', 'Chennai', 'Noida', 'Hyd'];
+        console.log(g1, g4); // output - Bangalore, Hyd
+
+
+        //skipping values
+        var [g1, , , g4] = ['Bangalore', 'Chennai', 'Noida', 'Hyd'];
+        console.log(g1, g4); // g2, g3 --- it is not defined.
+
+
+        // using rest param
+        var [g1, ...param] = ['Bangalore', 'Chennai', 'Noida', 'Hyd'];
+        console.log(g1, param);
+
+
+        //swapping the values from array
+        var x = 10, y = 20;
+        console.log([x, y]);  // =====> [10, 20]
+
+        [x, y] = [y, x];
+        console.log([x, y]); // ====> [20,10]
+
+
+        // De-str assignment with function
+        function getName() {
+            return ['Hello', 'World']
+        }
+
+        let [a111, b111] = getName();
+        console.log(a111);  /// Hello
+
+        // default vaues
+        var [xx = 0, yy = 0] = [100];
+        console.log(xx, yy);  // ===> y will take default value if not passed
+
+
+        // all the above fetures can be achived in object as well
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        // ES5 way
+        function getDetails(name, age, address) {
+            return {
+                name: name,
+                age: age,
+                address: address,
+                fullDetails: function () {
+                    console.log(this.name, this.age, this.address)
+                }
+            };
+        }
+
+        let details = getDetails('HCL', 42, 'Chennai');
+        console.log(details);
+        details.fullDetails();
+
+
+        // ES6 way using enhanced object properties and
+        function getDetails(name, age, address) {
+            return {
+                name,
+                age,
+                address,
+                fullDetails() {
+                    console.log(this.name, this.age, this.address)
+                }
+            };
+        }
+
+        let details1 = getDetails('HCL', 42, 'Chennai');
+        console.log(details1);
+        details.fullDetails();
+
+
+    </script>
+</body>
+
+</html>

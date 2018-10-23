@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        function* getData() {
+            console.log('This will be executed first.');
+            yield 'data1';
+            console.log('I will be printed after the pause');
+            yield 'data2!';
+        }
+        const getData1 = getData();
+        console.log(getData1.next().value);
+        console.log(getData1.next().value);
+        console.log(getData1.next().value);
+    </script>
+</body>
+
+</html>
