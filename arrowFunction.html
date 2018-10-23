@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        // normal function
+        function getName() {  // function without parameter
+            console.log('Hello World')
+        }
+
+        function add(a, b) {  // function with parameter
+            console.log(a + b)
+        }
+        getName();
+        add(2, 3);
+
+        //es6 function
+        getNameES6 = () => { // without parameter
+            console.log('Hello World es6 function');
+        }
+
+        addES6 = (a, b) => {
+            console.log(a + b)
+        }
+
+        getNameES6();
+        addES6(7, 3);
+
+
+        // Rest Parameters
+        getData = (a, b, ...name) => {
+            console.log(a, b, name)
+        }
+
+        getData(1, 2, 3, 4, 5, 6);//       output: 1 2 (4) [3, 4, 5, 6]
+
+    </script>
+</body>
+
+</html>

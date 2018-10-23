@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        // with variable  var keyword
+        var a = 10; // global
+        function vars() {
+            var b = 20; // local varibale
+            if (true) {
+                var c = 30;
+            }
+            console.log("b = " + b);
+            console.log("c = " + c)
+        }
+        console.log("a = " + a);
+        vars();
+
+
+        // with let
+        let a1 = 10; // global
+        function lets() {
+            let b1 = 20; // local
+            if (true) {
+                let c1 = 30 // block scope
+            }
+            console.log("b1 = " + b1);
+            console.log("c1 = " + c1)
+        }
+        console.log("a1 = " + a1);
+        lets();
+
+
+        // with let
+        let a2 = 10; // global
+        if (true) {
+            let v1 = 30;
+           // let v1 = 20 or 30  ====> You cant declare a same varibale or redeclare same varibale inside same scope
+        }
+        let v1 = 230; // this is possible because scope of the varibale is ended in block or outside the block
+        console.log("v1 = " + v1);
+        console.log("a2 = " + a2);
+
+    </script>
+</body>
+
+</html>
